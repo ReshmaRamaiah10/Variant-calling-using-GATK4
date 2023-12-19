@@ -18,17 +18,28 @@ This analysis runs through the GATK4 best practices workflow for variant calling
 The following tools are used in this analysis. Most of these tools are installed using [Homebrew](https://brew.sh/):
 
 1. [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
 ``` brew install fastqc```
+
 2. [multiqc](https://multiqc.info/)
+
 ```pip install multiqc```
+
 3. [samtools 1.19](https://www.htslib.org/)
+
 ```brew install samtools```
+
 4. [bwa 0.7.17](https://github.com/lh3/bwa)
+
 ```brew install bwa```
+
 5. [picard 3.1.1](https://broadinstitute.github.io/picard/)
+
 Install [picard.jar](https://github.com/broadinstitute/picard/releases/tag/3.1.1) and most recent Java version using brew
 ```brew install openjdk@17```
+
 6. [GATK 4.1.3.0](https://gatk.broadinstitute.org/hc/en-us)
+
 This analysis is performed using GATK docker interactively:
 ```docker pull broadinstitute/gatk:4.1.3.0```
 
