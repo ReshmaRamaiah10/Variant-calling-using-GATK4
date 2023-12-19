@@ -19,7 +19,9 @@ The following tools are used in this analysis. Most of these tools are installed
 
 1. [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-``` brew install fastqc```
+```
+brew install fastqc
+ ```
 
 2. [multiqc](https://multiqc.info/)
 
