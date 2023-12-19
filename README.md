@@ -41,11 +41,24 @@ brew install openjdk@17
 ```
 6. [GATK 4.1.3.0](https://gatk.broadinstitute.org/hc/en-us)
 
-This analysis is performed using GATK docker interactively:
+This analysis is performed using [GATK docker](https://gatk.broadinstitute.org/hc/en-us/articles/360035889991) interactively:
 ```
 docker pull broadinstitute/gatk:4.1.3.0
 ```
 
-
+## Data preprocessing
 
 Data preprocessing includes read trimming, alignment, sorting by coordinate, and marking duplicates.
+
+1.  Quality control checks on the raw fastq data
+
+FastQC (Fast Quality Control) is designed to assess the quality of high-throughput sequencing data. Its main purpose is to provide a comprehensive analysis of various quality-related metrics and characteristics of raw sequencing data. Here are the primary purposes and features of FastQC:
+- Per-Base Sequence Quality
+- Per-Sequence Quality Scores
+- Sequence Length Distribution
+- GC Content Distribution
+- Sequence Duplication Levels
+- Overrepresented Sequences
+- Adapter Content
+- Kmer Content
+- Quality per Base Position
