@@ -34,11 +34,13 @@ brew install samtools
 brew install bwa
 ```
 5. [picard 3.1.1](https://broadinstitute.github.io/picard/)
+
 Install [picard.jar](https://github.com/broadinstitute/picard/releases/tag/3.1.1) and most recent Java version using brew
 ```
 brew install openjdk@17
 ```
 6. [GATK 4.1.3.0](https://gatk.broadinstitute.org/hc/en-us)
+
 This analysis is performed using GATK docker interactively:
 ```
 docker pull broadinstitute/gatk:4.1.3.0
