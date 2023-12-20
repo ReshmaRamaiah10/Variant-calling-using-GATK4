@@ -123,6 +123,7 @@ gatk ApplyBQSR -I my_data/NA12878.sort.dup.bam \
 -O my_data/NA12878.sort.dup.bqsr.bam
 ```
 We now have a pre-processed BAM file (NA12878.sort.dup.bqsr.bam) ready for variant calling.
+
 3. The command below uses Picard to generate QC metrics. Run multiQC to aggregate it with fastq data and produce an HTML report.
 ```
 java -jar -Xmx7g picard.jar CollectMultipleMetrics \
