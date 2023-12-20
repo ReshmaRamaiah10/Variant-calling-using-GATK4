@@ -172,7 +172,8 @@ This is a two step process:
 ```
 gatk CNNScoreVariants -V my_data/NA12878.vcf.gz \
 -R my_data/reference/Homo_sapiens_assembly38.fasta \
--O my_data/filtered_output/NA12878.cnns.vcf
+-O my_data/filtered_output/NA12878.cnns.vcf \
+--disable-avx-check
 ```
 
 2. FilterVariantTranches takes as input the percent sensitivities (0-100) to known sites to apply the filter. Variants with scores higher than for e.g. 99th percentile of variants in the resources pass through the filter and will have PASS in the filter. Others will have a filter values like ‘CNN_1D_INDEL_Tranche_99.40_100.00’ or ‘CNN_1D_SNP_Tranche_99.95_100.00’.
