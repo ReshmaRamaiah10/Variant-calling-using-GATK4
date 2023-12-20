@@ -137,14 +137,30 @@ java -jar -Xmx7g picard.jar CollectMultipleMetrics \
 
 ## Variant Calling using HaplotypeCaller
 
-HaplotypeCaller is the focal tool within GATK4 to simultaneously call germline SNVs and small Indels using local de novo assembly of haplotype regions.
-Briefly, the HaplotypeCaller works by: 1. Identify active regions or regions with evidence of variations. 2. Re-asssemble the active regions. 3. Re-align active region reads to the assembled regions to identify allele.
+HaplotypeCaller is the focal tool within GATK4 to simultaneously call germline SNVs and small Indels using local de novo assembly of haplotype regions. It is developed by the Broad Institute and is widely used in variant calling workflows.
+
+Briefly, the HaplotypeCaller works by: 
+1. Identify active regions or regions with evidence of variations.
+2. Re-asssemble the active regions.
+3. Re-align active region reads to the assembled regions to identify allele.
 ```
 gatk HaplotypeCaller -I my_data/NA12878.sort.dup.bqsr.bam \
 -R my_data/reference/Homo_sapiens_assembly38.fasta \
 -L chr20 \
 -O my_data/NA12878.vcf.gz
 ```
+The output will be a VCF (Variant Call Format) file containing the called variants.
+
+GATK's SelectVariants tool is used to filter and select specific subsets of variants from a Variant Call Format (VCF) file based on certain criteria. This tool allows you to tailor your variant dataset to include only the variants that meet specified conditions, facilitating downstream analyses and focusing on relevant portions of the data.
+
+To create separate VCF files for `SNPs` (Single Nucleotide Polymorphisms) and `INDELS`, using the following commands:
+```
+gatk SelectVariants -V my_data/NA12878.vcf.gz -R my_data/reference/Homo_sapiens_assembly38.fasta --select-type-to-include SNP -O my_data/output/raw_snps.vcf
+```
+```
+gatk SelectVariants -V my_data/NA12878.vcf.gz -R my_data/reference/Homo_sapiens_assembly38.fasta --select-type-to-include INDEL -O my_data/output/raw_indel.vcf
+```
+**Results**: 2 diferent vcf files with 6055 `SNP` variants and 1452 `INDEL` variants respectively were created
 
 ## Filter and prepare analysis ready variants
 
