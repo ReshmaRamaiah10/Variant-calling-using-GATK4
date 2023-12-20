@@ -78,7 +78,11 @@ multiqc fatsqc_results/
 
 Map the raw sequencing data to the Homo sapiens genome assembly GRCh38 (hg38) using the BWA-MEM algorithms. Use Samtools to convert the output to the BAM format.
 ```
-bwa mem -M -t 2 -R "@RG\tID:SRR622461.7\tSM:NA12878\tLB:ERR194147\tPL:ILLUMINA" reference/Homo_sapiens_assembly38.fasta NA12878.chr20.region_1.fastq.gz NA12878.chr20.region_2.fastq.gz | samtools view -b -h -o NA12878.bam -
+bwa mem -M -t 2 -R "@RG\tID:SRR622461.7\tSM:NA12878\tLB:ERR194147\tPL:ILLUMINA" \
+reference/Homo_sapiens_assembly38.fasta \
+NA12878.chr20.region_1.fastq.gz \
+NA12878.chr20.region_2.fastq.gz | \
+samtools view -b -h -o NA12878.bam -
 ```
 At the end of this step you should have a file called `NA12878.bam`.
 
