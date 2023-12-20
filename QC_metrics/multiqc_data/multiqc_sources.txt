@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	NA12878.chr20.region_2	/Users/ramaiahr/Documents/mskcc/wgs/fastqc/NA12878.chr20.region_2_fastqc.zip
+FastQC	all_sections	NA12878.chr20.region_1	/Users/ramaiahr/Documents/mskcc/wgs/fastqc/NA12878.chr20.region_1_fastqc.zip

@@ -1,0 +1,21 @@
+[2023-12-19 14:42:54,072] multiqc                                            [DEBUG  ]  This is MultiQC v1.18
+[2023-12-19 14:42:54,072] multiqc                                            [DEBUG  ]  Command used: /Users/ramaiahr/anaconda3/bin/multiqc fastqc
+[2023-12-19 14:42:54,341] multiqc                                            [WARNING]  MultiQC Version v1.19 now available!
+[2023-12-19 14:42:54,342] multiqc                                            [DEBUG  ]  Working dir : /Users/ramaiahr/Documents/mskcc/wgs
+[2023-12-19 14:42:54,342] multiqc                                            [DEBUG  ]  Template    : default
+[2023-12-19 14:42:54,342] multiqc                                            [DEBUG  ]  Running Python 3.10.9 (main, Mar  1 2023, 12:33:47) [Clang 14.0.6 ]
+[2023-12-19 14:42:54,342] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, mapdamage, biobambam2, jcvi, mtnucratio, picard, vep, bakta, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, seqera_cli, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, truvari, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, freyja, humid, kat, leehom, librarian, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, sourmash, kaiju, bracken, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap, xenome, xengsort
+[2023-12-19 14:42:54,342] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /var/folders/h7/m4gt2xs50_3fnnjyj_6n_r5m0000gn/T/tmp47xfyyug
+[2023-12-19 14:42:54,343] multiqc                                            [INFO   ]  Search path : /Users/ramaiahr/Documents/mskcc/wgs/fastqc
+[2023-12-19 14:42:54,385] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_module_specific_max_filesize: 14] // [skipped_no_match: 2]
+[2023-12-19 14:42:54,836] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.7.2
+[2023-12-19 14:42:54,836] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.7.2
+[2023-12-19 14:42:54,837] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2023-12-19 14:42:54,842] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 2 reports
+[2023-12-19 14:42:54,860] multiqc.utils.software_versions                    [DEBUG  ]  Reading software versions from config.software_versions
+[2023-12-19 14:42:54,863] multiqc                                            [DEBUG  ]  Compressing plot data
+[2023-12-19 14:42:54,902] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2023-12-19 14:42:54,902] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2023-12-19 14:42:54,902] multiqc                                            [DEBUG  ]  Moving data file from '/var/folders/h7/m4gt2xs50_3fnnjyj_6n_r5m0000gn/T/tmp47xfyyug/multiqc_data' to '/Users/ramaiahr/Documents/mskcc/wgs/multiqc_data'
+[2023-12-19 14:42:54,904] multiqc                                            [DEBUG  ]  Full report path: /Users/ramaiahr/Documents/mskcc/wgs/multiqc_report.html
+[2023-12-19 14:42:54,977] multiqc                                            [INFO   ]  MultiQC complete
