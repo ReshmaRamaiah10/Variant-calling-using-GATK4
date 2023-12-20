@@ -189,7 +189,7 @@ The VariantFiltration tools is designed for hard-filtering variant calls based o
 ```
 gatk VariantFiltration -V my_data/NA12878.vcf.gz \
 -R my_data/reference/Homo_sapiens_assembly38.fasta \
--O my_data/output.vqsr.varfilter.vcf \
+-O my_data/NA12878.vqsr.varfilter.vcf \
 --filter-name "Low_depth10" \
 --filter-expression "DP < 10"
 ```
@@ -205,7 +205,10 @@ bcftools stats NA12878.vcf.gz > final/report.txt
 
 2. This GATK4 tool extracts fields of interest from each record in a VCF file. VariantsToTable can extract field from both the INFO and FORMAT columns in the VCF file.
 ```
-gatk VariantsToTable -V my_data/output.vqsr.varfilter.vcf -R my_data/reference/Homo_sapiens_assembly38.fasta -F CHROM -F POS -F FILTER -F TYPE -GF AD -GF DP --show-filtered -O my_data/output.vqsr.varfilter.pass.tsv
+gatk VariantsToTable -V my_data/NA12878.vqsr.varfilter.vcf \
+-R my_data/reference/Homo_sapiens_assembly38.fasta \
+-F CHROM -F POS -F FILTER -F TYPE -GF AD -GF DP --show-filtered \
+-O my_data/NA12878.vqsr.varfilter.pass.tsv
 ```
 
 3. We can also create a subset of variants to report.
