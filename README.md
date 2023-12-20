@@ -160,7 +160,7 @@ gatk SelectVariants -V my_data/NA12878.vcf.gz -R my_data/reference/Homo_sapiens_
 ```
 gatk SelectVariants -V my_data/NA12878.vcf.gz -R my_data/reference/Homo_sapiens_assembly38.fasta --select-type-to-include INDEL -O my_data/output/raw_indel.vcf
 ```
-**Results**: 2 diferent vcf files with 6055 `SNP` variants and 1452 `INDEL` variants respectively were created
+**Results**: Totally, 7517 variants were recorded. 2 diferent vcf files with 6055 `SNP` variants and 1452 `INDEL` variants respectively were created.
 
 ## Filter and prepare analysis ready variants
 
