@@ -45,6 +45,10 @@ This analysis is performed using [GATK docker](https://gatk.broadinstitute.org/h
 ```
 docker pull broadinstitute/gatk:4.1.3.0
 ```
+7. [bcftools](https://samtools.github.io/bcftools/bcftools.html)
+```
+brew install bcftools
+```
 
 ## Data preprocessing
 
@@ -123,7 +127,6 @@ gatk ApplyBQSR -I my_data/NA12878.sort.dup.bam \
 -O my_data/NA12878.sort.dup.bqsr.bam
 ```
 We now have a pre-processed BAM file (NA12878.sort.dup.bqsr.bam) ready for variant calling.
-
 3. The command below uses Picard to generate QC metrics. Run multiQC to aggregate it with fastq data and produce an HTML report.
 ```
 java -jar -Xmx7g picard.jar CollectMultipleMetrics \
@@ -177,8 +180,21 @@ gatk VariantFiltration -V my_data/NA12878.vcf.gz \
 
 ## Exporting variant data and visualisation
 
-Given we have a filter annotated VCF files (), we can now create an analysis ready VCF file.
+enerating a report for a VCF (Variant Call Format) file, especially in its compressed form (VCF.gz), typically involves using tools that can provide summary statistics, metrics, and other relevant information about the variants in the file.
 
+1. Generate a VCF report. The report includes various metrics such as transition/transversion ratios, Ti/Tv ratios, and more.
+```
+bcftools stats NA12878.vcf.gz > final/report.txt
+```
+
+2. This GATK4 tool extracts fields of interest from each record in a VCF file. VariantsToTable can extract field from both the INFO and FORMAT columns in the VCF file.
 ```
 gatk VariantsToTable -V my_data/output.vqsr.varfilter.vcf -R my_data/reference/Homo_sapiens_assembly38.fasta -F CHROM -F POS -F FILTER -F TYPE -GF AD -GF DP --show-filtered -O my_data/output.vqsr.varfilter.pass.tsv
 ```
+
+3. We can also create a subset of variants to report.
+```
+bcftools view NA12878.vcf.gz chr20:3822018-3999324 | bgzip -c > filtered_output/subset.vcf.gz
+```
+
+View these vcf reports using [IGV](https://www.igv.org/), a popular genome browser that allows you to visualize and explore genomic data, including VCF files.
